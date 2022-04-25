@@ -2,6 +2,13 @@
 {
     public class Person
     {
+        private string v;
+
+        public Person(string v)
+        {
+            this.v = v;
+        }
+
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateTime BirthDate { get; set; }
