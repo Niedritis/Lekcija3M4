@@ -1,27 +1,26 @@
 ﻿using M4;
 
-Person arnis = new Person("Arnis");
-arnis.Name = "Arnis";
-arnis.Surname = "Ozolins";
-arnis.BirthDate = 10.11.1980;
-arnis.Gender = true;
+Person person1 = new Person();
 
-string arnisName = arnis.Name;
-Console.WriteLine($"I Have created with name  {arnisName} ");
+Console.WriteLine("Lūdzu, ievadi savu vārdu");
+string PeopleName = Console.ReadLine();
+
+person1.Name = PeopleName;
+
+Console.WriteLine("Lūdzu, ievadi savu uzvārdu");
+string PeopleLastName = Console.ReadLine();
+person1.Surname = PeopleLastName;
 
 
-phone1.Size = 15;
-phone1.Brand = "nokia";
-phone1.Model = "galaxy";
+Console.WriteLine("Lūdzu, ievadi savu dz.dat dd,mm,yyyy");
+string PeopleBirhtDay = Console.ReadLine();
+person1.BirthDate = DateTime.Parse(PeopleBirhtDay);
 
-string phonename = phone1.Brand;
 
-string phonemodel = phone1.Model;
+Console.WriteLine("Lūdzu, ievadi savu hobiju");
+string PeopleHobby = Console.ReadLine();
+person1.Hobby = PeopleHobby;
 
-Console.WriteLine($"apsveicu jauns telefons {phonename} modelis {phonemodel}");
 
-phone1.Call();
+person1.Greeting();
 
-phone1.Sms();
-arnis.Greeting();
-arnis.Call("22233222222");
